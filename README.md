@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub - GrzywN](https://github.com/GrzywN/testimonials-grid-section-main)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://tender-leavitt-30eb2f.netlify.app/)
 
 ## My process
 

@@ -1,0 +1,119 @@
+.grid {
+  min-height: 35.75em;
+  max-width: 69.375em;
+  margin: 1.75em;
+  gap: 1.75em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  animation: slideIn 1s ease;
+  &__section {
+    padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.25em;
+    border-radius: $border-radius;
+    &--purple {
+      background-color: $moderate-violet;
+      background-image: url(../images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position: right 5em top;
+    }
+    &--dark-grey {
+      background-color: $very-dark-grayish-blue;
+    }
+    &--white {
+      background-color: $white;
+    }
+    &--navy-blue {
+      background-color: $very-dark-blackish-blue;
+    }
+    &--col-span-2 {
+      grid-column: span 2;
+    }
+    &--row-span-2 {
+      grid-row: span 2;
+    }
+    &--col-start-3 {
+      grid-column-start: 3;
+    }
+    transition: transform 150ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__picture {
+    image-rendering: optimizeSpeed;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    &--purple-border {
+      box-sizing: content-box;
+      border: 0.125rem solid $light-violet;
+    }
+  }
+  &__publisher {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  &__publisher-wrapper {
+    display: grid;
+    gap: 0.25em;
+  }
+}
+
+@media screen and (min-width: 42.5em) and (max-width: 78.125em) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    &__section {
+      &--purple {
+        background-position: right 3em top;
+      }
+    }
+  }
+  .md-grid {
+    &__section {
+      &--row-2 {
+        grid-row: 2;
+      }
+      &--row-3 {
+        grid-row: 3;
+      }
+      &--col-span-full {
+        grid-column: 1/-1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 42.5em) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    gap: 1.5rem;
+    &__section {
+      &--purple {
+        background-position: right 1em top;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: clamp(1em, calc(1em + 0.25vw), 1.25em);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

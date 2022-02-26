@@ -1,0 +1,42 @@
+.grid {
+  font-family: $font-family;
+  &__section {
+    &--purple {
+      color: $white;
+    }
+    &--dark-grey {
+      color: $white;
+    }
+    &--white {
+      color: $very-dark-grayish-blue;
+    }
+    &--navy-blue {
+      color: $white;
+    }
+  }
+  &__publisher-name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 0.8125rem;
+  }
+  &__publisher-graduation {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 0.6875rem;
+    opacity: $graduate-opacity;
+  }
+  &__heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  &__quote {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.125rem;
+    opacity: $paragraph-opacity;
+  }
+}
